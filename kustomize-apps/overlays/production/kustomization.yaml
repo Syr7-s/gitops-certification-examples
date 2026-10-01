@@ -3,6 +3,9 @@ commonLabels:
   variant: production
 bases:
 - ../../base
+replicas:
+  - name: production-my-deployment
+    count: 5
 patchesStrategicMerge:
 - config-map.yaml
 - service.yaml
